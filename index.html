@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>📘 Study Tracker</h2>
+
+    <form id="studyForm">
+      <input type="text" id="subject" placeholder="Subject/Topic" required />
+      <input type="number" id="hours" placeholder="Hours" min="0.1" step="0.1" required />
+      <input type="date" id="date" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <table id="studyTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Subject</th>
+          <th>Hours</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="total" id="totalHours">Total: 0 hrs</div>
+
+    <div class="chart-container">
+      <h3>📊 Study Hours by Date</h3>
+      <canvas id="studyChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
